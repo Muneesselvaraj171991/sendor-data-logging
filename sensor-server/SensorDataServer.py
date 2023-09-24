@@ -17,11 +17,11 @@ data_parser = LogParser()
 @app.route('/sensor_data', methods = ['GET'])
 def sendor_data():
   pkg_in_json = []
+  #Reading collected binary
   collected_binary = logger.read()
   total_data_length = len(collected_binary)
 
   if(total_data_length > 0):
-  
 
     remaining_data = collected_binary
     remaining_data = remaining_data[:-1] if remaining_data[-1] == '\n' else remaining_data
@@ -54,7 +54,7 @@ def readSensorData():
  
 
     directory = os.getcwd()
-    command = directory+"\server\simulation\sensor_data.x86_64-pc-windows-gnu.exe",
+    command = directory+"\sensor-server\simulation\sensor_data.x86_64-pc-windows-gnu.exe",
     print("Sensor simulator started at: ", command)
 
     process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
@@ -76,7 +76,7 @@ def readSensorData():
 
   
 if __name__ == '__main__':
-    #Starting sensor simulaton on background thread to let flask server running in main thread
+    #Starting sensor simulation on background thread to let flask server running in main thread
     thread = Thread(target=readSensorData,)
     thread.daemon = True
     thread.start()

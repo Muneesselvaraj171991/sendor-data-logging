@@ -1,0 +1,1 @@
+ ![](C:\Users\smadhiya\Pictures\Android_client_for_sensor_data.png "Testing result from Android client")

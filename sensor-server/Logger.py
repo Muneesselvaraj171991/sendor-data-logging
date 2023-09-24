@@ -9,10 +9,10 @@ class DataLogger():
     def write(self,message):
         #with self.lock:
         self.stdout += message
-        print("Message writting is called"+str(len(self.stdout)))
+        print("Message writing length as of now: ", len(self.stdout))
 
 
     def read(self):
         #with self.lock:
-        print("Message reading is called"+str(len(self.stdout)))
+        print("Message reading as of now: ", len(self.stdout))
         return self.stdout

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SensorReader</string>
+    <string name="sensor_data_empty">Sensor data is not ready yet!</string>
+</resources>

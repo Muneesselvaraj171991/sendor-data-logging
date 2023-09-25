@@ -33,5 +33,6 @@ I have tested in web browser and Android emulator, If you are running in Android
 I am thinking Server-client communication can be a **Push-Based** instead of pull-based. Since this is the assignment I may miss safe-fail stuffs in source. 
 
 ## Referencess 
-
+https://www.geeksforgeeks.org/flask-creating-first-simple-application/
+https://docs.python.org/3/library/subprocess.html
  

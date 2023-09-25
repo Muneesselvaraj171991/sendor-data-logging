@@ -1,4 +1,4 @@
-# Seson-data-logging
+# Sesor-data-logging
 
  The idea behind this task is to create a json log file from sensor simulator. Simulator produces data in binary, As an user It is us to parse and covert it as Json log file.
 

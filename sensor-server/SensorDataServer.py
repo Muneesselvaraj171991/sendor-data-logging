@@ -49,7 +49,7 @@ def sendor_data():
         
   return jsonify(pkg_in_json)
   
-def readSensorData():
+def read_sensor_data():
     sensor_data_binary_read = b'' 
  
 
@@ -70,14 +70,14 @@ def readSensorData():
             for stdio in process.stdout.readlines():
                 print(stdio.strip())
                 if stdio != '':
-                    print(str(stdio))
+                    logger.write(stdio)
 
             break
 
   
 if __name__ == '__main__':
     #Starting sensor simulation on background thread to let flask server running in main thread
-    thread = Thread(target=readSensorData,)
+    thread = Thread(target=read_sensor_data,)
     thread.daemon = True
     thread.start()
     #Since it is the assignment , I am hosting server in HTTP, can be configured as https if needed.
